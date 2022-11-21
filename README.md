@@ -1,4 +1,4 @@
-# my-movie-spa
+# CatsAPI
 
 ## Project setup
 ```
