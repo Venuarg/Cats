@@ -4,7 +4,7 @@
       :photo="photo"
       :key="photo.id"
   >
-    <img @click="$router.push(`/cat`)" :src="photo.url">
+    <img @click.prevent="$router.push(`/item/${photo.id}`)" :src="photo.url">
   </div>
 </template>
 
@@ -13,17 +13,11 @@ import {defineComponent, PropType} from "vue";
 import {Photo} from "@/types/index.js";
 
 export default defineComponent({
-    name: 'HelloWorld.vue',
+    name: 'CatsPage.vue',
     props: {
         photos: {
             type: Array as PropType<Photo[]>,
             required: true
-        }
-    },
-
-    methods: {
-        log (photo: any) {
-            console.log(photo.url)
         }
     }
 })
@@ -35,6 +29,7 @@ img {
     height: 200px;
     width: 200px;
     margin: 25px;
+    cursor: pointer;
 }
 
 h3 {

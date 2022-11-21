@@ -9,12 +9,7 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/cat',
-    name: 'itemCat',
-    component: CatIdPage
-  },
-  {
-    path: '/cat/:id',
+    path: '/item/:id',
     name: 'itemCat',
     component: CatIdPage
   }
