@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cat',
     name: 'itemCat',
     component: CatIdPage
+  },
+  {
+    path: '/cat/:id',
+    name: 'itemCat',
+    component: CatIdPage
   }
 ]
 

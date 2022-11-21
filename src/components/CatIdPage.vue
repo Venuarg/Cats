@@ -1,9 +1,7 @@
 <template>
   <div>
     <button @click="$router.push('/')">Go back</button>
-  </div>
-  <div>
-    Здесь должна быть картинка с котиком, на которого кликнули
+    <p>{{$route.params.id}}</p>
   </div>
 </template>
 
