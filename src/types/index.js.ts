@@ -5,6 +5,10 @@ export interface Photo {
     height: number
 }
 
+export interface Type {
+    name: string
+}
+
 export interface Breed {
     id: string
     name: string

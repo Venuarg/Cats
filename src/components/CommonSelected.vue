@@ -38,12 +38,15 @@ export default defineComponent({
       if (event.target.value) {
         if (event.target.value / 2) {
           this.$store.commit('setCategory', event.target.value)
+        } else if (event.target.value === 'png'|| event.target.value === 'jpg' || event.target.value === 'gif') {
+          this.$store.commit('setType', event.target.value)
         } else {
           this.$store.commit('setBreed', event.target.value)
         }
       } else {
         this.$store.commit('setCategory', event.target.value)
         this.$store.commit('setBreed', event.target.value)
+        this.$store.commit('setType', event.target.value)
       }
 
       this.$store.dispatch('getPhotos')

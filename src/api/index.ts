@@ -4,6 +4,7 @@ interface FilterParams {
     breed: string
     limit: number
     category: number | undefined
+    type: string | undefined
 }
 
 export async function getPhotos (params: FilterParams) {
@@ -11,7 +12,8 @@ export async function getPhotos (params: FilterParams) {
         params: {
             limit: params.limit,
             breed_ids: params.breed || undefined,
-            category_ids: params.category || undefined
+            category_ids: params.category || undefined,
+            mime_types: params.type || undefined
         }
     })
 }

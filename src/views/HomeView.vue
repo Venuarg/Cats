@@ -10,7 +10,10 @@
 
     <div>
       <p>image type</p>
-      <common-selected v-model="selectedSort"/>
+      <common-selected
+          v-model="selectedSort"
+          :options="this.$store.state.types"
+      />
     </div>
 
     <div>
